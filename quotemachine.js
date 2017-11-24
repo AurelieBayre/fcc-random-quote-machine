@@ -1,8 +1,11 @@
-var newArg;
-var newDef;
+/*
+updating with "let" and const instead of var. Have to test if it works. 24/11/17
+*/
+let newArg = "";
+let newDef = "";
 function newFallaciousArg() {
 
-		var fallacious = [
+		const fallacious = [
 		{fargument: "Shifting the burden of proof",
 		example: "I need not prove my claim, you must prove it is false."},
 		{fargument: "Divine fallacy",
@@ -26,10 +29,10 @@ function newFallaciousArg() {
 	];
 
 
-		var randomNum = Math.floor(Math.random() * fallacious.length);
+		let randomNum = Math.floor(Math.random() * fallacious.length);
 
-	newArg = fallacious[randomNum].fargument;
-	newDef = fallacious[randomNum].example;
+		newArg = fallacious[randomNum].fargument;
+		newDef = fallacious[randomNum].example;
 
 		document.getElementById("afficherFarg").innerHTML = newArg;
 		document.getElementById("afficherDef").innerHTML = newDef;
@@ -37,5 +40,5 @@ function newFallaciousArg() {
 
 
 function retweet() {
-	window.open("https://twitter.com/intent/tweet?text="+ "Learning about: " +newArg + " http://bit.ly/2fhyiQS, via @alphabetacoder");
+	window.open("https://twitter.com/intent/tweet?text="+ "Learning about: " + newArg + " http://bit.ly/2fhyiQS, via @aurelieBayre");
                };
